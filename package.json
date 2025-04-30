@@ -9,7 +9,8 @@
     "build:0": "pnpm run -F gui-webview build",
     "build:1": "pnpm run -F gui-webviewview build",
     "build": "pnpm build:0 && pnpm build:1",
-    "watch": "pnpm run -F extension-example watch"
+    "watch": "pnpm run -F extension-example watch",
+    "package": "pnpm run -F extension-example vsce:package"
   },
   "keywords": [],
   "author": "",

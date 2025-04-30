@@ -17,7 +17,26 @@
         "command": "extension-example.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "sidebar",
+          "title": "Extension Example Sidebar",
+          "icon": "assets/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "sidebar": [
+        {
+          "type": "webview",
+          "id": "extension-example.sidebar",
+          "name": "Extension Example Sidebar",
+          "icon": "assets/logo.svg"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
@@ -28,7 +47,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "vsce:package": "vsce package --no-dependencies"
   },
   "devDependencies": {
     "@types/vscode": "^1.99.0",
