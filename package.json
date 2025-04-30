@@ -1,0 +1,18 @@
+{
+  "name": "vscode-webview-with-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:0": "pnpm run -F gui-webview dev",
+    "dev:1": "pnpm run -F gui-webviewview dev",
+    "build:0": "pnpm run -F gui-webview build",
+    "build:1": "pnpm run -F gui-webviewview build",
+    "build": "pnpm build:0 && pnpm build:1",
+    "watch": "pnpm run -F extension-example watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.0"
+}
